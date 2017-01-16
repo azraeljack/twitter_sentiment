@@ -5,13 +5,13 @@
         <div class="ui cards column" ng-cloak>
           <div class="card" ng-repeat="tweet in vm.tweets">
             <div class="content">
-              <div class="header"> @Jack </div>
+              <div class="header"> {{ tweet.screen_name }} </div>
               <div class="description">
-                Hahahaha, THis movie is soooooooooooo great
+                {{ tweet.text }}
               </div>
             </div>
-            <div class="ui bottom attached green button" disabled="true">
-              Positive
+            <div class="ui bottom attached green button disabled">
+              {{ tweet.sentiment }}
             </div>
           </div>
         </div>
