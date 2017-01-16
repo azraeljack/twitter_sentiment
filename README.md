@@ -23,8 +23,20 @@ Then do the following installation
 * `$ cd twitter_sentiment/`
 * `$ pip install -r requirements.txt`
 * `$ npm install -g bower`
+
+To build the project:
+
 * `$ npm install`
 * `$ python manage.py migrate`
+
+To run the project:
+
 * `$ python manage.py runserver`
+
+To test the project:
+
+* `$ python manage.py test`
+
+
 
 
