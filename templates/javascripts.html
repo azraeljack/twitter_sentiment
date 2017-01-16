@@ -1,0 +1,33 @@
+{% load compress %}
+{% load staticfiles %}
+
+{% compress js %}
+    <!-- Useful Libraries -->
+    <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/alertify/alertify.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/semantic-ui/dist/semantic.min.js' %}"></script>
+
+    <!-- Angular.js Libraries -->
+    <script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-cookies/angular-cookies.js' %}"></script>
+
+
+    <!-- Twitter Sentiment Angular Main Modules -->
+    <script type="text/javascript" src="{% static 'javascripts/twitter_sentiment.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/twitter_sentiment.config.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/twitter_sentiment.routes.js' %}"></script>
+
+    <!-- Twitter Sentiment Angular Sub Modules -->
+    <script type="text/javascript" src="{% static 'javascripts/utils/untils.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/utils/services/alertify.service.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/utils/services/transfer.service.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/search_tweet/search_tweet.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/search_tweet/controllers/search_tweet.controller.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/search_tweet/services/search_tweet.service.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/layout/layout.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/layout/controllers/index.controller.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/show_tweet/show_tweet.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/show_tweet/controllers/show_tweet.controller.js' %}"></script>
+
+{% endcompress %}

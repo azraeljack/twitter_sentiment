@@ -1,0 +1,10 @@
+{% load compress %}
+{% load staticfiles %}
+
+{% compress css %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/semantic-ui/dist/semantic.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/alertify/themes/alertify.core.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/alertify/themes/alertify.default.css' %}" />
+
+{% endcompress %}

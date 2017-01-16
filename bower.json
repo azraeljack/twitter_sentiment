@@ -1,0 +1,21 @@
+{
+  "name": "twitter_sentiment",
+  "version": "0.0.1",
+  "homepage": "https://github.com/azraeljack/twitter_sentiment",
+  "license": "UNLICENSED",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "angular-cookies": "^1.6.1",
+    "semantic-ui": "^2.2",
+    "jquery": "^3.1.1",
+    "alertify": "^0.3.10"
+  }
+}

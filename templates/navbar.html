@@ -1,0 +1,19 @@
+<div class="ui top attached menu">
+  <a href="#" class="item header">
+  Twitter Sentiment
+  </a>
+  <div class="ui bottom attached segment pushable">
+    <div class="pusher">
+      <div class="ui basic segment">
+        <div class="ui grid">
+          <div class="ui wide column">
+            <div class="ui fluid action input" ng-controller="SearchTweetController as vm">
+              <input type="text" ng-model="vm.keywords" placeholder="Search...">
+              <div class="ui button red" ng-click="vm.search()">Search</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
