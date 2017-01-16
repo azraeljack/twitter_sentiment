@@ -8,3 +8,6 @@ class AnalyzeTweet(models.Model):
 
     def __unicode__(self):
         return self.content
+
+    def get_tweet(self):
+        return '{}: {} tweets {}'.format(self.sentiment, self.screen_name, self.content)
