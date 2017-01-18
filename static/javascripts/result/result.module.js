@@ -3,7 +3,7 @@
 
   angular
     .module('twitter_sentiment.show_tweet', [
-      'twitter_sentiment.show_tweet.controllers'
+      'twitter_sentiment.result.controllers'
     ]);
 
   angular

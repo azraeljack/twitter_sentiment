@@ -2,12 +2,12 @@
     'use strict';
 
     angular
-        .module('twitter_sentiment.search_tweet.services')
-        .factory('SearchTweet', SearchTweet);
+        .module('twitter_sentiment.history.services')
+        .factory('History', History);
 
-    SearchTweet.$inject = ['$http', 'Alertify', 'Transfer'];
+    History.$inject = ['$http', 'Alertify', 'Transfer'];
 
-    function SearchTweet($http, Alertify, Transfer) {
+    function History($http, Alertify, Transfer) {
         var SearchTweet = {
             search: search
         };

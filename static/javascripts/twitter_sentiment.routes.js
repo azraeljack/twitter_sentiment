@@ -9,10 +9,15 @@
 
     function config($routeProvider) {
         $routeProvider
-            .when('/', {
-                controller: 'IndexController',
+            .when('/Result', {
+                controller: 'ResultController',
                 controllerAs: 'vm',
-                templateURL: '/static/templates/layout/index.html'
+                templateURL: '/static/templates/layout/result.html'
+            })
+            .when('/History', {
+                controller: 'HistoryController',
+                controllerAs: 'vm',
+                templateURL: '/static/templates/layout/history.html'
             })
             .otherwise('/');
     }

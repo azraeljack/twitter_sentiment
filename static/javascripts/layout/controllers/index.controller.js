@@ -1,3 +1,8 @@
+/**
+ * Controller control the view of the index page.
+ * Includes the search bar and tabs, also the search function.
+ */
+
 (function () {
     'use strict';
 
@@ -10,7 +15,7 @@
     function IndexController($scope) {
         var vm = this;
 
-        //TODO: Leave this controller for future function
+
 
     }
 })();
