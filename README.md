@@ -7,7 +7,7 @@
 
 *Note: Requires [Twitter API Key](https://dev.twitter.com/resources/signup) and [Text-Processing API Key](https://market.mashape.com/japerk/text-processing/pricing)*
 
-Export the following environment variables first, or you can use the set_env.py script to set them:
+Export the following environment variables first, or you can add keys to the local_run.py script to set them:
 * `$ TWITTER_CONSUMER_KEY`
 * `$ TWITTER_SECRET_KEY`
 * `$ TWITTER_ACCESS_TOKEN`
@@ -29,9 +29,9 @@ To build the project:
 * `$ npm install`
 * `$ python manage.py migrate`
 
-To run the project:
+To run the project locally:
 
-* `$ python manage.py runserver`
+* `$ python local_run.py`
 
 To test the project:
 

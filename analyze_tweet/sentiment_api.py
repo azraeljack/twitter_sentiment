@@ -22,7 +22,7 @@ class SearchTweet(object):
             access_token_secret=self.access_token_secret
         )
 
-        self.max_tweets = 10
+        self.max_tweets = 5
 
     def search(self, keywords):
         if keywords:
@@ -47,7 +47,7 @@ class SearchTweet(object):
 class SentimentAnalyze(object):
 
     def __init__(self):
-        self.sentiment_api_key = os.environ.get('TEXT-PROCESSING_API_KEY')
+        self.sentiment_api_key = os.environ.get('TEXT_PROCESSING_API_KEY')
 
         self.headers = {
             "X-Mashape-Key": self.sentiment_api_key,

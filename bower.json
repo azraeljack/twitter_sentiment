@@ -14,8 +14,11 @@
     "angular": "^1.6.1",
     "angular-route": "^1.6.1",
     "angular-cookies": "^1.6.1",
+    "angular-material": "^1.1.1",
+    "angular-material-icons": "^0.7.1",
     "semantic-ui": "^2.2",
     "jquery": "^3.1.1",
-    "alertify": "^0.3.10"
+    "alertify": "^0.3.10",
+    "bootstrap": "^3.3.7"
   }
 }
