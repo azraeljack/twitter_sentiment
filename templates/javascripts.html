@@ -3,15 +3,19 @@
 
 {% compress js %}
     <!-- Useful Libraries -->
-    <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
     <script type="text/javascript" src="{% static 'bower_components/alertify/alertify.js' %}"></script>
-    <script type="text/javascript" src="{% static 'bower_components/semantic-ui/dist/semantic.min.js' %}"></script>
 
     <!-- Angular.js Libraries -->
     <script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
-    <script type="text/javascript" src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
     <script type="text/javascript" src="{% static 'bower_components/angular-cookies/angular-cookies.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-animate/angular-animate.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-messages/angular-messages.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-aria/angular-aria.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
 
+    <!-- Angular Material Libraries -->
+    <script type="text/javascript" src="{% static 'bower_components/angular-material/angular-material.js' %}"></script>
 
     <!-- Twitter Sentiment Angular Main Modules -->
     <script type="text/javascript" src="{% static 'javascripts/twitter_sentiment.js' %}"></script>
@@ -22,12 +26,12 @@
     <script type="text/javascript" src="{% static 'javascripts/utils/untils.module.js' %}"></script>
     <script type="text/javascript" src="{% static 'javascripts/utils/services/alertify.service.js' %}"></script>
     <script type="text/javascript" src="{% static 'javascripts/utils/services/transfer.service.js' %}"></script>
-    <script type="text/javascript" src="{% static 'javascripts/search_tweet/search_tweet.module.js' %}"></script>
-    <script type="text/javascript" src="{% static 'javascripts/search_tweet/controllers/search_tweet.controller.js' %}"></script>
-    <script type="text/javascript" src="{% static 'javascripts/search_tweet/services/search_tweet.service.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/history/history.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/history/controllers/history.controller.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/history/services/history.service.js' %}"></script>
     <script type="text/javascript" src="{% static 'javascripts/layout/layout.module.js' %}"></script>
     <script type="text/javascript" src="{% static 'javascripts/layout/controllers/index.controller.js' %}"></script>
-    <script type="text/javascript" src="{% static 'javascripts/show_tweet/show_tweet.module.js' %}"></script>
-    <script type="text/javascript" src="{% static 'javascripts/show_tweet/controllers/show_tweet.controller.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/result/result.module.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascripts/result/controllers/result.controller.js' %}"></script>
 
 {% endcompress %}

@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="twitter_sentiment">
-  <head>
+<head>
     <title>Twitter Sentiment Analysis</title>
-    <base href="/" />
+    <base href="/"/>
     {% include 'stylesheets.html' %}
-  </head>
-  <body>
-    <div class="content">
-    {% include 'navbar.html' %}
-    {% include 'tweets.html' %}
+</head>
+<body>
+<div layout="row">
+    <div layout="column" class="relative" layout-fill role="main">
+        {% include 'navbar.html' %}
+        <md-content flex md-scroll-y>
+            <ng-view layout="column" layout-fill layout-padding>
+            </ng-view>
+        </md-content>
     </div>
-    {% include 'javascripts.html' %}
-  </body>
+</div>
+{% include 'javascripts.html' %}
+</body>
 </html>
