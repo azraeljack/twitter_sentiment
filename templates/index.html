@@ -5,16 +5,22 @@
     <base href="/"/>
     {% include 'stylesheets.html' %}
 </head>
-<body>
-<div layout="row">
-    <div layout="column" class="relative" layout-fill role="main">
-        {% include 'navbar.html' %}
-        <md-content flex md-scroll-y>
-            <ng-view layout="column" layout-fill layout-padding>
-            </ng-view>
-        </md-content>
-    </div>
+<body layout="row" ng-controller="IndexController as vm">
+
+<div layout="column" class="relative" layout-fill role="main">
+    {% include 'navbar.html' %}
+    <md-content flex md-scroll-y>
+        <div layout="column" layout-fill layout-padding>
+            <div class="inset" hide-sm></div>
+                <ng-switch on="vm.selectedIndex" class="tabpanel-container">
+                    {% include 'result.html' %}
+                    {% include 'history.html' %}
+                </ng-switch>
+            </div>
+        </div>
+    </md-content>
 </div>
+
 {% include 'javascripts.html' %}
 </body>
 </html>

@@ -2,35 +2,35 @@
 {#<md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">#}
 {#    <ng-md-icon icon="add"></ng-md-icon>#}
 {#</md-button>#}
-<md-toolbar ng-show="!showSearch">
+<md-toolbar ng-show="!vm.showSearch">
     <div class="md-toolbar-tools">
         <h3>
             Twitter Sentiment
         </h3>
         <span flex></span>
-        <md-button aria-label="Search" ng-click="showSearch = !showSearch">
+        <md-button aria-label="Search" ng-click="vm.showSearch = !vm.showSearch">
             <ng-md-icon icon="search"></ng-md-icon>
         </md-button>
     </div>
-    <md-tabs md-stretch-tabs class="md-primary" md-selected="data.selectedIndex">
-        <md-tab id="result-tab" aria-controls="result-tab-content">
+    <md-tabs md-stretch-tabs class="md-primary" md-selected="vm.selectedIndex">
+        <md-tab id="result-tab" href="/result" aria-controls="result-tab-content">
             Search Result
         </md-tab>
-        <md-tab id="history-tab" aria-controls="history-tab-content">
+        <md-tab id="history-tab" href="/history" aria-controls="history-tab-content">
             Search History
         </md-tab>
     </md-tabs>
 </md-toolbar>
-<md-toolbar class="md-hue-1" ng-show="showSearch">
+<md-toolbar class="md-hue-1" ng-show="vm.showSearch">
     <div class="md-toolbar-tools">
-        <md-button ng-click="showSearch = !showSearch" aria-label="Back">
+        <md-button ng-click="vm.showSearch = !vm.showSearch" aria-label="Back">
             <ng-md-icon icon="arrow_back"></ng-md-icon>
         </md-button>
-        <md-input-container md-theme="input" flex>
+        <md-input-container flex>
             <label>&nbsp;</label>
-            <input ng-model="search.who" placeholder="enter search">
+            <input ng-model="vm.keyword" placeholder="enter search">
         </md-input-container>
-        <md-button aria-label="Search" ng-click="showSearch = !showSearch">
+        <md-button aria-label="Search" ng-click="vm.search()">
             <ng-md-icon icon="search"></ng-md-icon>
         </md-button>
     </div>

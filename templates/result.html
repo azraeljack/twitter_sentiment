@@ -1,36 +1,42 @@
-<div class="inset" hide-sm></div>
-<ng-switch on="data.selectedIndex" class="tabpanel-container">
-    <div role="tabpanel"
-         id="Result"
-         aria-labelledby="tab1"
-         ng-switch-when="0"
-         md-swipe-left="next()"
-         md-swipe-right="previous()"
-         layout="row" layout-align="center center">
-        <md-card flex-gt-sm="90" flex-gt-md="80">
-            <md-card-content>
-                <h2>Tweets</h2>
-                <md-list>
-                    <md-item ng-repeat="item in tweets">
-                        <md-item-content>
-                            <div class="md-tile-left inset" hide-sm>
-                                <user-avatar></user-avatar>
-                            </div>
-                            <div class="md-tile-content">
-                                <h3>{{ item.screen_name }}</h3>
-                                <h4>Tweeted</h4>
-                                <p>
-                                    {{ item.text }}
-                                </p>
-                            </div>
-                        </md-item-content>
-                        <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
-                        <md-divider hide-gt-sm ng-if="!$last"></md-divider>
-                    </md-item>
-                    <md-divider></md-divider>
-                </md-list>
-            </md-card-content>
-        </md-card>
-    </div>
-</ng-switch>
-
+<div role="tabpanel"
+     id="Result"
+     aria-labelledby="result-tab"
+     ng-switch-when="0"
+     md-swipe-left="next()"
+     md-swipe-right="previous()"
+     layout="row" layout-align="center center">
+    <md-card flex-gt-sm="90" flex-gt-md="80">
+        <md-card-content>
+            <h2>Tweets</h2>
+            <md-list>
+                <md-item ng-repeat="tweet in vm.tweets">
+                    <md-item-content>
+                        <md-card>
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <span class="md-headline">{{ tweet.screen_name }}</span>
+                                    <span class="md-subhead">{{ tweet.text }}</span>
+                                </md-card-title-text>
+                                <md-card-title-media>
+                                    <div class="md-media-sm card-media">
+                                        <ng-switch on="tweet.sentiment">
+                                            <ng-md-icon style="fill:green" size="64" icon="sentiment_satisfied"
+                                                        ng-switch-when="pos"></ng-md-icon>
+                                            <ng-md-icon style="fill:red" size="64" icon="sentiment_dissatisfied"
+                                                        ng-switch-when="neg"></ng-md-icon>
+                                            <ng-md-icon style="fill:orange" size="64" icon="sentiment_neutral"
+                                                        ng-switch-default></ng-md-icon>
+                                        </ng-switch>
+                                    </div>
+                                </md-card-title-media>
+                            </md-card-title>
+                        </md-card>
+                    </md-item-content>
+                    <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                    <md-divider hide-gt-sm ng-if="!$last"></md-divider>
+                </md-item>
+                <md-divider></md-divider>
+            </md-list>
+        </md-card-content>
+    </md-card>
+</div>
