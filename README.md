@@ -13,7 +13,7 @@ Export the following environment variables first, or you can add keys to the loc
 * `$ TWITTER_ACCESS_TOKEN`
 * `$ TWITTER_ACCESS_TOKEN_SECRET`
 * `$ TWITTER_ACCESS_TOKEN_SECRET`
-* `$ TEXT-PROCESSING_API_KEY`
+* `$ TEXT_PROCESSING_API_KEY`
 
 Then do the following installation
 
