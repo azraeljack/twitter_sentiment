@@ -1,16 +1,16 @@
 angular
     .module('twitter_sentiment', [
         'twitter_sentiment.config',
-        // 'twitter_sentiment.routes',
         'twitter_sentiment.search',
         'twitter_sentiment.layout',
         'twitter_sentiment.utils',
+        // 'twitter_sentiment.routes',
         'ngMaterial',
         'ngMdIcons'
     ]);
 
 angular
-    .module('twitter_sentiment.config', []);
+    .module('twitter_sentiment.config', ['ngMaterial']);
 
 // angular
 //     .module('twitter_sentiment.routes', ['ngRoute']);

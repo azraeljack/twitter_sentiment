@@ -5,12 +5,19 @@
         .module('twitter_sentiment.config')
         .config(config);
 
-    config.$inject = ['$locationProvider', '$mdThemingProvider'];
+    config.$inject = ['$locationProvider', '$mdThemingProvider', '$interpolateProvider'];
 
-    function config($locationProvider, $mdThemingProvider) {
+    function config($locationProvider, $mdThemingProvider, $interpolateProvider) {
         $locationProvider.html5Mode(true);
         $locationProvider.hashPrefix('!');
-        $mdThemingProvider.theme('default')
+        $interpolateProvider
+            .startSymbol('{$')
+            .endSymbol('$}');
+        $mdThemingProvider
+            .theme('default')
+            .primaryPalette('red')
+            .accentPalette('teal')
+            .backgroundPalette('grey')
             .dark();
     }
-});
+})();
