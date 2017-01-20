@@ -5,37 +5,44 @@
      md-swipe-left="next()"
      md-swipe-right="previous()"
      layout="row" layout-align="center center">
-    <md-card flex-gt-sm="90" flex-gt-md="80">
+    <div layout="row" layout-sm="column" layout-align="space-around" ng-show="vm.loading">
+        <md-progress-circular class="md-accent md-hue-1" md-diameter="60"></md-progress-circular>
+    </div>
+    <md-card flex-gt-sm="90" flex-gt-md="80" ng-show="vm.showResult">
         <md-card-content>
             <h2>Tweets</h2>
             <md-list>
                 <md-item ng-repeat="tweet in vm.tweets">
                     <md-item-content>
-                        <md-card>
+                        <md-card class="content">
                             <md-card-title>
                                 <md-card-title-text>
-                                    <span class="md-headline">{$ tweet.screen_name $}</span>
+                                    <span class="md-headline"><b>{$ tweet.screen_name $}</b></span>
                                     <p>{$ tweet.text $}</p>
                                 </md-card-title-text>
                                 <md-card-title-media>
                                     <div class="md-media-sm card-media">
                                         <ng-switch on="tweet.sentiment">
-                                            <ng-md-icon style="fill:green" size="64" icon="sentiment_satisfied"
+                                            <ng-md-icon class="satisfied sentiment" size="64" icon="sentiment_satisfied"
                                                         ng-switch-when="pos"></ng-md-icon>
-                                            <ng-md-icon style="fill:red" size="64" icon="sentiment_dissatisfied"
+                                            <ng-md-icon class="dissatisfied sentiment" size="64"
+                                                        icon="sentiment_dissatisfied"
                                                         ng-switch-when="neg"></ng-md-icon>
-                                            <ng-md-icon style="fill:orange" size="64" icon="sentiment_neutral"
+                                            <ng-md-icon class="neutral sentiment" size="64" icon="sentiment_neutral"
                                                         ng-switch-default></ng-md-icon>
                                         </ng-switch>
                                     </div>
                                 </md-card-title-media>
                             </md-card-title>
+                            <md-card-actions layout="row" layout-align="end center">
+                                <md-button class="check" ng-click="vm.open(tweet.link)">
+                                    <ng-md-icon icon="open_in_new"></ng-md-icon>
+                                    Go check it out!
+                                </md-button>
+                            </md-card-actions>
                         </md-card>
                     </md-item-content>
-                    <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
-                    <md-divider hide-gt-sm ng-if="!$last"></md-divider>
                 </md-item>
-                <md-divider></md-divider>
             </md-list>
         </md-card-content>
     </md-card>

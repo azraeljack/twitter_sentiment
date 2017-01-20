@@ -5,19 +5,19 @@
 <md-toolbar ng-show="!vm.showSearch">
     <div class="md-toolbar-tools">
         <h3>
-            Twitter Sentiment
+            <b>Tweet</b>Sentiment
         </h3>
         <span flex></span>
         <md-button aria-label="Search" ng-click="vm.showSearch = !vm.showSearch">
             <ng-md-icon icon="search"></ng-md-icon>
         </md-button>
     </div>
-    <md-tabs md-stretch-tabs class="md-primary" md-selected="vm.selectedIndex">
-        <md-tab id="result-tab" href="/result" aria-controls="result-tab-content">
-            Search Result
+    <md-tabs md-stretch-tabs="always" flex class="md-primary" md-selected="vm.selectedIndex">
+        <md-tab id="result-tab" flex aria-controls="result-tab-content">
+            <md-tab-label>Search Result</md-tab-label>
         </md-tab>
-        <md-tab id="history-tab" href="/history" aria-controls="history-tab-content">
-            Search History
+        <md-tab id="history-tab" flex aria-controls="history-tab-content">
+            <md-tab-label>Search History</md-tab-label>
         </md-tab>
     </md-tabs>
 </md-toolbar>
@@ -28,7 +28,7 @@
         </md-button>
         <md-input-container flex>
             <label>&nbsp;</label>
-            <input ng-model="vm.keyword" placeholder="enter search">
+            <input ng-model="vm.keyword" placeholder="Enter Keyword">
         </md-input-container>
         <md-button aria-label="Search" ng-click="vm.search()">
             <ng-md-icon icon="search"></ng-md-icon>

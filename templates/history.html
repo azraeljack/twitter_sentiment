@@ -13,11 +13,16 @@
                     <md-item-content>
                         <div class="md-tile-left inset" hide-sm>
                         </div>
-                        <div class="md-tile-content">
+                        <div class="md-tile-content" layout="row">
                             <h2>{$ item $}</h2>
+                            <span flex></span>
+                            <md-button class="check" ng-click="vm.search(item)">
+                                <ng-md-icon icon="search"></ng-md-icon>
+                                Search it again!
+                            </md-button>
                         </div>
                     </md-item-content>
-                    <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                    <md-divider hide-sm ng-if="!$last"></md-divider>
                     <md-divider hide-gt-sm ng-if="!$last"></md-divider>
                 </md-item>
                 <md-divider></md-divider>
