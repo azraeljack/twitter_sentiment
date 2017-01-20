@@ -2,7 +2,7 @@
   "name": "twitter_sentiment",
   "version": "0.0.1",
   "homepage": "https://github.com/azraeljack/twitter_sentiment",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
