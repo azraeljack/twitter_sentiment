@@ -31,7 +31,7 @@ To build the project:
 
 To run the project locally:
 
-* `$ python local_run.py`
+* `$ python run.py -h HOST_IP -p PORT`
 
 To test the project:
 
