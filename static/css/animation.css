@@ -1,0 +1,57 @@
+.ng-hide-add         {
+  -webkit-animation:0.5s lightSpeedOut ease;
+  animation:0.5s lightSpeedOut ease;
+}
+
+.ng-hide-remove      {
+  -webkit-animation:0.5s lightSpeedIn ease;
+  animation:0.5s lightSpeedIn ease;
+}
+
+@-webkit-keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(0deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(0deg);
+    -ms-transform: translate3d(100%, 0, 0) skewX(0deg);
+    transform: translate3d(100%, 0, 0) skewX(0deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0) skewX(0deg);
+    transform: translate3d(0, 100%, 0) skewX(0deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0) skewX(0deg);
+    -ms-transform: translate3d(0, 100%, 0) skewX(0deg);
+    transform: translate3d(0, 100%, 0) skewX(0deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

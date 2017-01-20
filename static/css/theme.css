@@ -1,0 +1,35 @@
+md-content.md-default-theme {
+  background-color: #fff;
+}
+
+md-card {
+  background-color: #3c3c3c;
+}
+
+md-card.content {
+  background-color: #4c4f52;
+}
+
+md-input-container {
+  padding-top: 20px;
+}
+
+ng-md-icon.sentiment {
+  padding-top: 20px;
+}
+
+ng-md-icon.satisfied {
+  fill: green;
+}
+
+ng-md-icon.dissatisfied {
+  fill: red;
+}
+
+ng-md-icon.neutral {
+  fill: orange;
+}
+
+md-button.check {
+  background-color: #3c3c3c;
+}
