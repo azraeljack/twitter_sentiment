@@ -26,17 +26,26 @@
 
         vm.search = search;
         vm.open = open;
+        vm.keyPressed = keyPressed;
 
         function open(url) {
             $window.open(url);
         }
 
-        function search(item) {
-            if(item !== undefined)
-                vm.keyword = item;
+        function keyPressed(keyEvent) {
+            if (keyEvent.keyCode == 13) {
+                vm.search();
+            }
+        }
+
+        function search(keyword) {
+            if (keyword !== undefined)
+                vm.keyword = keyword;
 
             if (vm.keyword !== undefined && vm.keyword !== '') {
-                vm.history.push(vm.keyword);
+                if (!checkHistory(vm.keyword))
+                    vm.history.push(vm.keyword);
+                vm.selectedIndex = 0;
                 vm.loading = true;
                 vm.showResult = false;
                 Search.search(vm.keyword).then(SearchSuccessFn, SearchErrorFn);
@@ -46,11 +55,18 @@
                 Alertify.error("Please type in the keywords you want to search!");
         }
 
+        function checkHistory(history) {
+            for (var i = 0; i < vm.history.length; i++) {
+                if (vm.history[i] === history)
+                    return true;
+            }
+            return false;
+        }
+
         function SearchSuccessFn(data, status, headers, config) {
             vm.loading = false;
             vm.showResult = true;
-            vm.showSearch = !vm.showSearch;
-            vm.selectedIndex = 0;
+            vm.showSearch = false;
             vm.tweets = data.data;
             Alertify.success('Search succeeded!');
         }

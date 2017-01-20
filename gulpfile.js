@@ -13,13 +13,13 @@ gulp.task('buildJS', function () {
         .pipe(ngAnnotate())
         .pipe(uglify())
         .pipe(optimizejs())
-        .pipe(gulp.dest('dist/javascripts/'));
+        .pipe(gulp.dest('static/dist/javascripts/'));
 });
 
 gulp.task('buildCSS', function () {
     return gulp.src('static/css/**/*.css')
         .pipe(concat('stylesheet.css'))
         .pipe(cleanCss())
-        .pipe(gulp.dest('dist/stylesheet'));
+        .pipe(gulp.dest('static/dist/stylesheet'));
 });
 

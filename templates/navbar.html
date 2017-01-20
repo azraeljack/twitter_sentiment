@@ -28,7 +28,7 @@
         </md-button>
         <md-input-container flex>
             <label>&nbsp;</label>
-            <input ng-model="vm.keyword" placeholder="Enter Keyword">
+            <input ng-model="vm.keyword" placeholder="Enter Keyword" ng-keypress="vm.keyPressed($event)">
         </md-input-container>
         <md-button aria-label="Search" ng-click="vm.search()">
             <ng-md-icon icon="search"></ng-md-icon>
