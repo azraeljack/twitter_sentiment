@@ -5,7 +5,7 @@ from subprocess import call
 
 def main():
 
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    base_dir = os.path.dirname(os.path.realpath(__file__))
 
     parser = argparse.ArgumentParser()
 
@@ -20,7 +20,7 @@ def main():
     os.environ['TWITTER_ACCESS_TOKEN_SECRET'] = 'your-key'
     os.environ['TEXT_PROCESSING_API_KEY'] = 'your-key'
 
-    call(["python3", os.path.join(base_dir, 'twitter_sentiment/manage.py'), "runserver", "{}:{}".format(args.host, args.port)])
+    call(["python3", os.path.join(base_dir, 'manage.py'), "runserver", "{}:{}".format(args.host, args.port)])
 
 if __name__ == '__main__':
     main()
