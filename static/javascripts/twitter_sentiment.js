@@ -10,7 +10,7 @@ angular
     ]);
 
 angular
-    .module('twitter_sentiment.config', ['ngMaterial']);
+    .module('twitter_sentiment.config', ['ngMaterial', 'ngAnimate']);
 
 // angular
 //     .module('twitter_sentiment.routes', ['ngRoute']);
