@@ -1,12 +1,10 @@
-import requests
 import json
 import os
-
+import requests
 from TwitterSearch import *
 
 
 class SearchTweet(object):
-
     def __init__(self):
         self.consumer_key = os.environ.get('TWITTER_CONSUMER_KEY')
         self.consumer_secret = os.environ.get('TWITTER_SECRET_KEY')
@@ -22,7 +20,7 @@ class SearchTweet(object):
             access_token_secret=self.access_token_secret
         )
 
-        self.max_tweets = 5
+        self.max_tweets = 10
 
     def search(self, keywords):
         if keywords:
@@ -34,18 +32,18 @@ class SearchTweet(object):
             self.tso.set_include_entities(False)
 
             for tweet in self.ts.search_tweets_iterable(self.tso):
-                counter += 1
                 if counter < self.max_tweets:
                     yield {
-                        'screen_name': tweet['user']['screen_name'],
-                        'text': tweet['text']
+                        'screen_name': '@' + tweet['user']['screen_name'],
+                        'text': tweet['text'],
+                        'link': 'https://twitter.com/{}/status/{}'.format(tweet['user']['screen_name'], tweet['id_str'])
                     }
                 else:
                     break
+                counter += 1
 
 
 class SentimentAnalyze(object):
-
     def __init__(self):
         self.sentiment_api_key = os.environ.get('TEXT_PROCESSING_API_KEY')
 

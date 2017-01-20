@@ -6,4 +6,4 @@ class AnalyzeTweetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = AnalyzeTweet
-        fields = ('screen_name', 'content', 'sentiment')
+        fields = ('screen_name', 'content', 'sentiment', 'link')
